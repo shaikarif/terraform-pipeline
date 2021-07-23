@@ -12,6 +12,17 @@ provider "aws" {
   shared_credentials_file = "/home/ec2-user/.aws/credentials"
 }
 
+
+resource "aws_vpc" "Main"  {
+     cidr_block  = "10.0.0.0/16"
+}
+resource "aws_internet_gateway" "Main" {
+       vpc_id = aws_vpc.Main.id
+       tags = {
+           Name = "terraform-igw"
+    }
+
+}
 resource "aws_instance" "JenkinsMaster" {
   ami = "ami-0dc8f589abe99f538"
   instance_type = "t2.micro"
