@@ -16,6 +16,9 @@ resource "aws_instance" "JenkinsMaster" {
   ami = "ami-0dc8f589abe99f538"
   instance_type = "t2.micro"
   availability_zone = "us-west-2b"
+  tags =  { 
+    Name= "Testing_instance"
+}
 
 }
 
