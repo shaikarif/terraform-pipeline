@@ -18,7 +18,3 @@ resource "aws_instance" "JenkinsMaster" {
 
 }
 
-resource"aws_vpc" "Main" {
-
-  cidr_block = "192.10.0.0/24"
-}
