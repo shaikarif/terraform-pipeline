@@ -1,4 +1,10 @@
 terraform {
+  backend = "remote"
+   org_name = "hunter"
+    workspaces =  {
+       Name = "terraform-pipeline"
+       }
+
   required_providers {
     aws = {
       source = "hashicorp/aws"
