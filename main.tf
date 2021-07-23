@@ -9,8 +9,8 @@ terraform {
 
 provider "aws" {
   region = "us-west-2"
-  Access_key_ID = "${var.Access_key_ID}"
-  Secret_access_key = "${var.Secret_access_key}"
+  Access_key_ID = "AKIA5UNHNPBAM6ZIBOFK"
+  Secret_access_key = "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"
 }
 
 resource "aws_instance" "JenkinsMaster" {
