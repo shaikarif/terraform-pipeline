@@ -1,10 +1,4 @@
 terraform {
-  backend = "remote"
-   org_name = "hunter"
-    workspaces =  {
-       Name = "terraform-pipeline"
-       }
-
   required_providers {
     aws = {
       source = "hashicorp/aws"
@@ -23,7 +17,7 @@ resource "aws_instance" "JenkinsMaster" {
   instance_type = "t2.micro"
   availability_zone = "us-west-2b"
   tags =  { 
-    Name= "Testing_instance"
+    Name= "jenkins_instance"
 }
 
 }
