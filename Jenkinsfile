@@ -11,9 +11,11 @@ stages  {
 secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]
      }
    }
+  
     stage('Terraform plan') {
        steps {
             'sh terraform plan'
  }
  }
+}
 }
