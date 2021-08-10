@@ -32,4 +32,11 @@ resource "aws_instance" "JenkinsMaster" {
 }
 
 }
+resource "aws_s3" "My_bucket" {
+       acl = "private"
+       tags = {
+       Name = "My_Bucket"
+       }
+  }
+}
 
