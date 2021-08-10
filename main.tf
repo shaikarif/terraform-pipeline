@@ -39,4 +39,5 @@ resource "aws_s3" "My_bucket" {
        }
   }
 }
+}
 
