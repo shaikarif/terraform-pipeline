@@ -1,9 +1,9 @@
 pipeline {
 
-  agent any {
+  agent any
   
 
-  stages  {
+  stages {
       stage('Authentication to AWS') {
 
          steps {
@@ -15,6 +15,7 @@ pipeline {
             'sh terraform plan'
           }
       }
-  }
- }
+   }
 }
+ 
+
