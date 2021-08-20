@@ -3,7 +3,7 @@ variable "region" {
      default = "us-west-2"
 }
 
-variable "avaiulability_zone" {
+variable "availability_zone" {
        type = list
        default = ["us-west-2a", "us-west2b", "us-west-2c"]
  }

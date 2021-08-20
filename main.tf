@@ -2,7 +2,7 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      version = "3.51.0"
+      version = "3.55.0"
     }
   }
 }
@@ -26,19 +26,17 @@ resource "aws_internet_gateway" "Main" {
 resource "aws_instance" "JenkinsMaster" {
   ami = "ami-0dc8f589abe99f538"
   instance_type = "t2.micro"
-  count = "$length(var.availability_zone)"
-  availability_zone = "$(elements.var.availablity_zones, index)"
+  count = length(var.availability_zone)
+  availability_zone = "$(elements.var.availablity_zone, count.index)"
   tags =  { 
     Name= "jenkins_instance"
 }
 
 }
-resource "aws_s3" "My_bucket" {
+resource "aws_s3_bucket" "My_bucket" {
        acl = "private"
        tags = {
        Name = "My_Bucket"
        }
   }
-}
-}
 
