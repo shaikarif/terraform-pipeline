@@ -1,10 +1,10 @@
-variable "Acces_key_ID" {
+variable "region" {
      type = string
-     default = ""
+     default = "us-west-2"
 }
 
-variable "Secret_access_key" {
-       type = string 
-       default = ""
+variable "avaiulability_zone" {
+       type = list
+       default = ["us-west-2a", "us-west2b", "us-west-2c"]
  }
 
