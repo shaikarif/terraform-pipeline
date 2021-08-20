@@ -27,7 +27,7 @@ resource "aws_instance" "JenkinsMaster" {
   ami = "ami-0dc8f589abe99f538"
   instance_type = "t2.micro"
   count = length(var.availability_zone)
-  availability_zone = "$(elements.var.availablity_zone, count.index)"
+  availability_zone = element(var.availability_zone, count.index)
   tags =  { 
     Name= "jenkins_instance"
 }
