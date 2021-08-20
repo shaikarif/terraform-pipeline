@@ -5,6 +5,6 @@ variable "region" {
 
 variable "availability_zone" {
        type = list
-       default = ["us-west-2a", "us-west2b", "us-west-2c"]
+       default = ["us-west-2a", "us-west-2b", "us-west-2c"]
  }
 
