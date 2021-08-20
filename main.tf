@@ -28,8 +28,9 @@ resource "aws_instance" "JenkinsMaster" {
   instance_type = "t2.micro"
   count = length(var.availability_zone)
   availability_zone = element(var.availability_zone, count.index)
+  key_name = "Oregon.pem"
   tags =  { 
-    Name= "jenkins_instance.count.index"
+    Name= "jenkins_instance ${count.index}"
 }
 
 }
