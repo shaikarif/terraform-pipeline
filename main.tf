@@ -29,7 +29,7 @@ resource "aws_instance" "JenkinsMaster" {
   count = length(var.availability_zone)
   availability_zone = element(var.availability_zone, count.index)
   tags =  { 
-    Name= "jenkins_instance"
+    Name= "jenkins_instance.count.index"
 }
 
 }
